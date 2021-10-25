@@ -1,0 +1,80 @@
+* {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #22322F;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 72px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==== Header ==== */
+
+header {
+    margin: 50px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.header__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    padding-right: 40px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav a:last-child {
+    color: #71A89E;
+}
+
+/* ==== Main content ==== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 400;
+}
+
+.content__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__title {
+    max-width: 550px;
+}
+
+.content__img {
+    width: 100%;
+    max-width: 664px;
+}
