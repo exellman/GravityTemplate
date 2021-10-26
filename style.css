@@ -1,17 +1,12 @@
 * {
     font-family: 'Zen Maru Gothic', sans-serif;
     color: #22322F;
+
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-}
-
-h1 {
-    font-size: 48px;
-    font-weight: normal;
-    line-height: 72px;
 }
 
 p {
@@ -26,8 +21,9 @@ a {
 
 /* ==== Header ==== */
 
-header {
-    margin: 50px 0;
+.header {
+    margin: 30px 0;
+
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
@@ -35,9 +31,12 @@ header {
 
 .header__inner {
     display: flex;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    padding: 0 30px;
 }
 
 .nav a {
@@ -50,6 +49,37 @@ header {
 
 .nav a:last-child {
     color: #71A89E;
+}
+
+
+/* ==== Nav toggle ==== */
+
+.nav-toggle {
+    display: none;
+
+    width: 30px;
+
+    padding: 10px 0;
+
+    position: absolute;
+    top: -3px;
+    right: 40px;
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+.nav-toggle-btn {
+    padding: 3px 15px 5px 15px;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19px;
+
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px #22322f;
+
 }
 
 /* ==== Main content ==== */
@@ -65,16 +95,130 @@ header {
 
 .content__inner {
     display: flex;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    padding: 30px;
+}
+
+.content__inner h1 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 72px;
+}
+
+.content__inner p {
+    margin-bottom: 50px;
 }
 
 .content__title {
     max-width: 550px;
 }
 
+.content__inner .btn {
+    padding: 15px 24px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+
+    background: #71A89E;
+    border: 2px solid #333333;
+    border-radius: 8px;
+
+    box-shadow: 3px 3px 0px #333333;
+
+    cursor: pointer;
+}
+
+.content__inner .btn:hover {
+    text-decoration: underline;
+}
+
 .content__img {
+    text-align: center;
+}
+
+.content__img img {
     width: 100%;
     max-width: 664px;
+}
+
+
+
+@media all and (max-width: 768px) {
+    .logo img {
+        max-width: 79px;
+    }
+    .content__inner {
+        flex-direction: column-reverse;
+    }
+
+    .content__inner h1 {
+        font-size: 27px;
+        line-height: 43px;
+    }
+
+    .content__inner p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .content__inner .btn {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 20px;
+    }
+}
+
+@media all and (max-width: 670px) {
+    .header {
+        position: fixed;
+
+        width: 100%;
+        margin: 0;
+
+        padding: 10px 0;
+
+        background: #fff;
+        box-shadow: 0 0 5px #333;
+    }
+    .nav {
+        position: absolute;
+
+        display: none;
+
+        flex-direction: column-reverse;
+
+        width: 100%;
+        padding: 0 20px;
+        top: 100%;
+        left: 0;
+        
+        background: #fff;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        width: auto;
+    }
+
+    .content__inner {
+        padding-top: 55px;
+    }
 }
