@@ -130,12 +130,15 @@ a {
     border-radius: 8px;
 
     box-shadow: 3px 3px 0px #333333;
+<<<<<<< HEAD
 
     cursor: pointer;
 }
 
 .content__inner .btn:hover {
     text-decoration: underline;
+=======
+>>>>>>> 5be78fc49a653d5df99da05b35557e1a56e32a87
 }
 
 .content__img {
